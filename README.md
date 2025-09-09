@@ -1,7 +1,7 @@
 # SmartRedstone
 Utilities for the Minecraft redstone engineer.  
 
-![demo](https://github.com/ZephyrBD/SmartRedstone/tree/master/demo/demo1.gif)
+![demo](https://github.com/ZephyrBD/SmartRedstone/blob/master/demo/demo1.gif)
 
 ## Requirements
 Paper 1.21.8 (Tested)
