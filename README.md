@@ -47,7 +47,7 @@ blocks:
     STICKY_PISTON:
       enabled: true       # Whether sticky pistons can be rotated (6 directions)
     HOPPER:
-      enabled: true       # Whether hoppers can be rotated (6 directions)
+      enabled: true       # Whether hoppers can be rotated (5 directions)
     DISPENSER:
       enabled: true       # Whether dispensers can be rotated (6 directions)
     DROPPER:
