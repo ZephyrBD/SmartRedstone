@@ -1,0 +1,8 @@
+name: SmartRedstone
+version: '1.0-release'
+main: zbd.smartRedstone.SmartRedstone
+api-version: '1.21'
+prefix: MCZS
+authors: [ ZephyrBD ]
+description: Prevent players from connecting to your server with a domain other than the official domain.
+website: https://zephyrbd.github.io

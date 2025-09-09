@@ -1,0 +1,33 @@
+tags:
+  flipping:
+    DOORS:
+      enabled: true
+    TRAPDOORS:
+      enabled: true
+    BUTTONS:
+      enabled: true
+    FENCE_GATES:
+      enabled: true
+
+blocks:
+  flipping:
+    REPEATER:
+      enabled: true
+    COMPARATOR:
+      enabled: true
+    OBSERVER:
+      enabled: true
+    PISTON:
+      enabled: true
+    STICKY_PISTON:
+      enabled: true
+    HOPPER:
+      enabled: true
+    DISPENSER:
+      enabled: true
+    DROPPER:
+      enabled: true
+
+translation:
+  reload: "§a[SmartRedstone] Configuration is reloaded!"
+  message: "&aThe block has been rotated!"
