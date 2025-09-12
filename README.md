@@ -26,35 +26,39 @@ Paper 1.21.8 (Tested)
 tags:
   flipping:
     DOORS:
-      enabled: true       # Whether doors can be rotated
+      enabled: true
     TRAPDOORS:
-      enabled: true       # Whether trapdoors can be rotated
+      enabled: true
     BUTTONS:
-      enabled: true       # Whether buttons can be rotated
+      enabled: true
     FENCE_GATES:
-      enabled: true       # Whether fence gates can be rotated
+      enabled: true
 
 blocks:
   flipping:
     REPEATER:
-      enabled: true       # Whether repeaters can be rotated (4 directions)
+      enabled: true
     COMPARATOR:
-      enabled: true       # Whether comparators can be rotated (4 directions)
+      enabled: true
     OBSERVER:
-      enabled: true       # Whether observers can be rotated (6 directions)
+      enabled: true
     PISTON:
-      enabled: true       # Whether pistons can be rotated (6 directions)
+      enabled: true
     STICKY_PISTON:
-      enabled: true       # Whether sticky pistons can be rotated (6 directions)
+      enabled: true
     HOPPER:
-      enabled: true       # Whether hoppers can be rotated (5 directions)
+      enabled: true
     DISPENSER:
-      enabled: true       # Whether dispensers can be rotated (6 directions)
+      enabled: true
     DROPPER:
-      enabled: true       # Whether droppers can be rotated (6 directions)
+      enabled: true
+
+tools:
+  # WARRING: Disabling the tool will result in the inability to flip comparators and repeaters.
+  use_bamboo: true
 
 translation:
-  reload: "§a[SmartRedstone] Configuration is reloaded!" # Message shown when using /smartredstone reload
-  message: "&aThe block has been rotated!"               # ActionBar message when a block is rotated
+  reload: "§a[SmartRedstone] Configuration is reloaded!"
+  message: "&aThe block has been rotated!"
 ```
 
