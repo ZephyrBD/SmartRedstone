@@ -54,7 +54,7 @@ blocks:
       enabled: true
 
 tools:
-  # WANRRING: Disabling the tool will result in the inability to flip comparators and repeaters.
+  # WARNING: Disabling the tool will result in the inability to flip comparators and repeaters.
   use_bamboo: true
 
 translation:
