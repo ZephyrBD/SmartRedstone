@@ -13,7 +13,7 @@ Paper 1.21.8 (Tested)
 
 ## Usage method
 
-- Left - click the block while sneaking
+- Left - click the block while sneaking and handing bamboo.
 
 ## Thanks
 
