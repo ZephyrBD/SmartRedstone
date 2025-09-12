@@ -28,6 +28,10 @@ blocks:
     DROPPER:
       enabled: true
 
+tools:
+  # WARRING: Disabling the tool will result in the inability to flip comparators and repeaters.
+  use_bamboo: true
+
 translation:
   reload: "§a[SmartRedstone] Configuration is reloaded!"
   message: "&aThe block has been rotated!"

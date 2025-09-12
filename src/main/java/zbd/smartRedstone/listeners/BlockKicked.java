@@ -1,5 +1,6 @@
 package zbd.smartRedstone.listeners;
 
+import org.bukkit.Material;
 import org.bukkit.Tag;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -22,13 +23,14 @@ public class BlockKicked implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        // 必须潜行并且左键点击方块
+        // 必须潜行并且右键点击方块
         if (!event.getPlayer().isSneaking()) return;
-        if (event.getAction() != Action.LEFT_CLICK_BLOCK) return;
-
+        if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
+        if (config.getBoolean("tools.use_bamboo") && event.getPlayer().getInventory().getItemInMainHand().getType() != Material.BAMBOO) return;
+        event.setCancelled(true);
         Block block = event.getClickedBlock();
         if (block == null) return;
-        // 4-方向方块
+        // 4-方向方块Tag
         if (Tag.DOORS.isTagged(block.getType()) ||
                 Tag.TRAPDOORS.isTagged(block.getType()) ||
                 Tag.BUTTONS.isTagged(block.getType()) ||
@@ -43,11 +45,11 @@ public class BlockKicked implements Listener {
             return;
         }
 
-        // 6-方向方块
+        // 4,5,6-方向方块
         switch (block.getType()) {
             case REPEATER,COMPARATOR -> {
                 String configKey = "blocks.flipping." + block.getType().name();
-                if (!config.getBoolean(configKey + ".enabled")) return;
+                if (!config.getBoolean(configKey + ".enabled") || !config.getBoolean("tools.use_bamboo")) return;
                 Flippers.flipFourFace(block,event.getPlayer(),plugin);
             }
             case HOPPER-> {
