@@ -6,7 +6,7 @@
 
     <groupId>zbd</groupId>
     <artifactId>SmartRedstone</artifactId>
-    <version>1.2-release</version>
+    <version>1.3-release</version>
     <packaging>jar</packaging>
 
     <name>SmartRedstone</name>

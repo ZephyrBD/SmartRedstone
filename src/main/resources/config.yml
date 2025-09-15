@@ -1,37 +1,25 @@
 tags:
   flipping:
-    DOORS:
-      enabled: true
-    TRAPDOORS:
-      enabled: true
-    BUTTONS:
-      enabled: true
-    FENCE_GATES:
-      enabled: true
+    DOORS: true
+    TRAPDOORS: true
+    BUTTONS: true
+    FENCE_GATES: true
 
 blocks:
   flipping:
-    REPEATER:
-      enabled: true
-    COMPARATOR:
-      enabled: true
-    OBSERVER:
-      enabled: true
-    PISTON:
-      enabled: true
-    STICKY_PISTON:
-      enabled: true
-    HOPPER:
-      enabled: true
-    DISPENSER:
-      enabled: true
-    DROPPER:
-      enabled: true
+    REPEATER: true
+    COMPARATOR: true
+    OBSERVER: true
+    PISTON: true
+    STICKY_PISTON: true
+    HOPPER: true
+    DISPENSER: true
+    DROPPER: true
 
-tools:
-  # WARRING: Disabling the tool will result in the inability to flip comparators and repeaters.
-  use_bamboo: true
+# options: HAND,BAMBOO
+tools: "BAMBOO"
 
 translation:
+  incorrect_tool: "&aTool is incorrect!"
   reload: "§a[SmartRedstone] Configuration is reloaded!"
   message: "&aThe block has been rotated!"
