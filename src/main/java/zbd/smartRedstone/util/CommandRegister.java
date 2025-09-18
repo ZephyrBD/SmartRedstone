@@ -16,7 +16,7 @@ public class CommandRegister {
                 .withPermission("smartredstone.admin")
                 .withSubcommand(new CommandAPICommand("reload")
                         .executes((sender, args) -> {
-                            plugin.reloadConfig(); // 重新读取磁盘
+                            plugin.reloadConfig();
                             String msg = plugin.getConfig().getString("translation.reload", "Config reloaded!");
                             sender.sendMessage(msg);
                         }))

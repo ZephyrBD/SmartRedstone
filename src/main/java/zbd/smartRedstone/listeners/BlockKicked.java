@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.jetbrains.annotations.NotNull;
 import zbd.smartRedstone.SmartRedstone;
 import zbd.smartRedstone.util.Flippers;
 
@@ -17,16 +18,16 @@ public class BlockKicked implements Listener {
     SmartRedstone plugin;
     private final FileConfiguration config;
 
-    public BlockKicked(SmartRedstone plugin) {
+    public BlockKicked(@NotNull SmartRedstone plugin) {
         this.plugin = plugin;
         this.config = plugin.getConfig();
     }
-    private String getToolConfig() {
+    private @NotNull String getToolConfig() {
         String value = plugin.getConfig().getString("tools");
         return value != null ? value : "HAND";
     }
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event) {
+    public void onPlayerInteract(@NotNull PlayerInteractEvent event) {
         // 必须潜行并且左键点击方块
         if (!event.getPlayer().isSneaking()) return;
         if (event.getAction() != Action.LEFT_CLICK_BLOCK) return;
@@ -53,7 +54,6 @@ public class BlockKicked implements Listener {
 
 
         Block block = event.getClickedBlock();
-        if (block == null) return;
         // 4-方向方块Tag
         if (Tag.DOORS.isTagged(block.getType()) ||
                 Tag.TRAPDOORS.isTagged(block.getType()) ||
@@ -66,6 +66,7 @@ public class BlockKicked implements Listener {
             if (Tag.FENCE_GATES.isTagged(block.getType()) && !config.getBoolean("tags.flipping.FENCE_GATES")) return;
 
             Flippers.flipFourFace(block,event.getPlayer(),plugin);
+            event.setCancelled(true);
             return;
         }
 
@@ -75,19 +76,22 @@ public class BlockKicked implements Listener {
                 String configKey = "blocks.flipping." + block.getType().name();
                 if (!config.getBoolean(configKey)) return;
                 Flippers.flipFourFace(block,event.getPlayer(),plugin);
+                event.setCancelled(true);
             }
             case HOPPER-> {
                 if (!config.getBoolean("blocks.flipping.HOPPER")) return;
                 Flippers.flipFiveFace(block,event.getPlayer(),plugin);
+                event.setCancelled(true);
             }
             case OBSERVER, PISTON, STICKY_PISTON, DISPENSER, DROPPER -> {
                 String configKey = "blocks.flipping." + block.getType().name();
                 if (!config.getBoolean(configKey)) return;
                 Flippers.flipSixFace(block,event.getPlayer(),plugin);
+                event.setCancelled(true);
             }
             default -> {
             }
         }
-        event.setCancelled(true);
+
     }
 }

@@ -10,7 +10,6 @@ public final class SmartRedstone extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        // ⚠️ 新版本必须用 CommandAPIBukkitConfig，而不是 CommandAPIConfig()
         CommandAPI.onLoad(new CommandAPIBukkitConfig(this));
     }
 
