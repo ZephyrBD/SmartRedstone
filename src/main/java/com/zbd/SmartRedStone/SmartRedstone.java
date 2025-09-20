@@ -1,10 +1,10 @@
-package zbd.smartRedstone;
+package com.zbd.SmartRedStone;
 
 import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPIBukkitConfig;
 import org.bukkit.plugin.java.JavaPlugin;
-import zbd.smartRedstone.listeners.BlockKicked;
-import zbd.smartRedstone.util.CommandRegister;
+import com.zbd.SmartRedStone.listeners.BlockKicked;
+import com.zbd.SmartRedStone.util.CommandRegister;
 
 public final class SmartRedstone extends JavaPlugin {
 

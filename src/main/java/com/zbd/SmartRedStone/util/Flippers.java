@@ -1,11 +1,11 @@
-package zbd.smartRedstone.util;
+package com.zbd.SmartRedStone.util;
 
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Player;
-import zbd.smartRedstone.SmartRedstone;
+import com.zbd.SmartRedStone.SmartRedstone;
 
 public class Flippers {
 

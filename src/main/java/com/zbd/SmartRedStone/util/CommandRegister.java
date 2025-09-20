@@ -1,7 +1,7 @@
-package zbd.smartRedstone.util;
+package com.zbd.SmartRedStone.util;
 
 import dev.jorel.commandapi.CommandAPICommand;
-import zbd.smartRedstone.SmartRedstone;
+import com.zbd.SmartRedStone.SmartRedstone;
 
 public class CommandRegister {
 

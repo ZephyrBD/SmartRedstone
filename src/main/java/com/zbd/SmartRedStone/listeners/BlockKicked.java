@@ -1,4 +1,4 @@
-package zbd.smartRedstone.listeners;
+package com.zbd.SmartRedStone.listeners;
 
 import org.bukkit.Material;
 import org.bukkit.Tag;
@@ -9,8 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.jetbrains.annotations.NotNull;
-import zbd.smartRedstone.SmartRedstone;
-import zbd.smartRedstone.util.Flippers;
+import com.zbd.SmartRedStone.SmartRedstone;
+import com.zbd.SmartRedStone.util.Flippers;
 
 import java.util.Objects;
 

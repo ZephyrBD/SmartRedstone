@@ -1,8 +1,8 @@
 name: SmartRedstone
-version: '1.0-release'
-main: zbd.smartRedstone.SmartRedstone
+version: '1.3-release'
+main: com.zbd.SmartRedStone.SmartRedstone
 api-version: '1.21'
-prefix: MCZS
+prefix: SmartRedStone
 authors: [ ZephyrBD ]
-description: Prevent players from connecting to your server with a domain other than the official domain.
+description: Provide flipping for common redstone components
 website: https://zephyrbd.github.io
